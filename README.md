@@ -1,9 +1,4 @@
- ~~~
- This is a coding example working on Caché 2018.1.3  and IRIS 2020.2 
- It will not be kept in sync with new versions      
- It is also NOT serviced by InterSystems Support !   
-~~~ 
-## fast JSON formatting (Caché / Ensemble)
+# fast JSON formatting (Caché / Ensemble)
 It's also an example for a customized command extension (ZZJSN) in Caché & IRIS 
   
 This is the Caché version for fast JSON formatting but it also works in IRIS.   
