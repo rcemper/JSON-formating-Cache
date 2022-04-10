@@ -70,3 +70,11 @@ ZZJSN jsn:"BOBBY"  ; writes it to local variable BOBBY
 ```  
 
 [Article in DC](https://community.intersystems.com/post/fast-json-formatting-cach%C3%A9-ensemble)
+
+[Demo Server SMP](https://cache-fast-json.demo.community.intersystems.com/csp/sys/UtilHome.csp)   
+[Demo Server WebTerminal](https://cache-fast-json.demo.community.intersystems.com/terminal/)    
+        
+**Code Quality**   
+<img width="85%" src="
+https://openexchange.intersystems.com/mp/img/packages/671/screenshots/4bh7tyapellnv0cjgw34riapcfo.jpg
+">
