@@ -2,6 +2,7 @@
 It's also an example for a customized command extension (ZZJSN) in Caché & IRIS 
   
 This is the Caché version for fast JSON formatting but it also works in IRIS.   
+Requires package [ZPretty](https://github.com/isc-at/ZPretty)   
 To allow parallel existence in IRIS this is named ZZJSN   
 
 see:
