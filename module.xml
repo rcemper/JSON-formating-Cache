@@ -14,7 +14,7 @@
         </ModuleReference>
       </Dependencies>
       <SourcesRoot>src</SourcesRoot>
-       <Resource Name="rc.zzjsn.PKG"/>
+       <Resource Name="rc.zzjsn.CLS"/>
        	<Invokes>
 	        <Invoke Class="rc.zzjsn" Method="init" Phase="Activate" When="After" ></Invoke>
         </Invokes>
