@@ -14,7 +14,10 @@
         </ModuleReference>
       </Dependencies>
       <SourcesRoot>src</SourcesRoot>
-       <Resource Name="ZZJSN.INC"/>
+       <Resource Name="rc.zzjsn.CLS"/>
+       	<Invokes>
+	        <Invoke Class="rc.zzjsn" Method="init" Phase="Activate" When="After" ></Invoke>
+        </Invokes>
     </Module>
   </Document>
 </Export>
