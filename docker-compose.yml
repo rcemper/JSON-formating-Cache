@@ -1,13 +1,13 @@
 services:
-  iris:
+  cache:
     build: 
       context: .
       dockerfile: Dockerfile
     restart: always
-    command: --check-caps false --ISCAgent false
     ports:
+      - 41023:23
       - 41773:1972
-      - 42773:52773
-      - 53773
+      - 42773:57772
     volumes:
-      - ./:/irisdev/app
+      - ./:/opt/cacheapp
+      - ../:/external

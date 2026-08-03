@@ -1,0 +1,12 @@
+ZN "%SYS"
+do ##class(Security.Users).UnExpireUserPasswords("*")
+
+zn "USER"
+kill
+set sc=$system.OBJ.ImportDir("/tmp/src/","*","ck",.err,,.imp)
+zwrite
+do ##class(rc.zzjsn).init()
+Write !,"==== Run Demo ====",! hang 3
+do ##class(rc.zzjsn).demo()
+halt
+

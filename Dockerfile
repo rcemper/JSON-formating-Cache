@@ -1,16 +1,20 @@
-ARG IMAGE=intersystemsdc/iris-community:latest
+ARG IMAGE=daimor/intersystems-cache:2018.1
 FROM $IMAGE
+USER root  
 
-USER root
+# to be enabled if a VALID cache.key is provided
+# otherwise you have just 1 single user !
+COPY cache.key    /usr/cachesys/mgr/cache.key
 
-WORKDIR /opt/irisapp
-RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
-USER ${ISC_PACKAGE_MGRUSER}
+COPY cconsole.log /usr/cachesys/mgr/cconsole.log
 
-COPY  src src
-COPY module.xml module.xml
-COPY iris.script /tmp/iris.script
+WORKDIR /opt/
 
-RUN iris start IRIS \
-	&& iris session IRIS < /tmp/iris.script \
-    && iris stop IRIS quietly
+RUN  usermod -a -G root cacheusr 
+
+COPY cache.script /tmp/cache.script
+COPY src /tmp/src
+
+RUN ccontrol start CACHE quietly \
+    && ccontrol session CACHE < /tmp/cache.script \
+    && ccontrol stop CACHE quietly
